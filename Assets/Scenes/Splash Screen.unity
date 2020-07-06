@@ -216,6 +216,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6603354429661794216, guid: e7c087c0b0c4db147aaca5b340f59297,
+        type: 3}
+      propertyPath: m_TagString
+      value: Music
+      objectReference: {fileID: 0}
     - target: {fileID: 6603354429661794218, guid: e7c087c0b0c4db147aaca5b340f59297,
         type: 3}
       propertyPath: m_LocalPosition.x
