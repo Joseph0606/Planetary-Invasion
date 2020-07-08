@@ -18,7 +18,7 @@ public class Music_player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Invoke("LoadFirstScene", 4f);
+        Invoke("LoadFirstScene", 6f);
     }
 
     void LoadFirstScene()
