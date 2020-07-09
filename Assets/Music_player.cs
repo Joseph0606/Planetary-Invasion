@@ -12,13 +12,13 @@ public class Music_player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("LoadFirstScene", 4f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Invoke("LoadFirstScene", 6f);
+
     }
 
     void LoadFirstScene()
