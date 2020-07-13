@@ -7,7 +7,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
-
+    [Header("General")]
     [Tooltip("In ms^-1")] [SerializeField] float xSpeed = 50f;
     [Tooltip("In m")][SerializeField] float xRestriction = 20f;
     [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 50f;
@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
     float xThrow;
     float yThrow;
+    bool isControlEnabled = true;
 
     // Start is called before the first frame update
     void Start()
@@ -30,10 +31,18 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isControlEnabled)
+        { 
         XMovement();
         YMovement();
-
         ProcessRotation();
+        }
+    }
+
+    private void StopMovement()  //Called by string reference
+    {
+        print("Stopped Movement");
+        isControlEnabled = false;
     }
 
     private void ProcessRotation()
@@ -65,4 +74,6 @@ public class Player : MonoBehaviour
 
         transform.localPosition = new Vector3(transform.localPosition.x, yPosition, transform.localPosition.z);
     }
+
 }
+
