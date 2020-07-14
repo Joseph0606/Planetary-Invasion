@@ -7,6 +7,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
+
     [Header("General")]
     [Tooltip("In ms^-1")] [SerializeField] float xSpeed = 50f;
     [Tooltip("In m")][SerializeField] float xRestriction = 20f;
@@ -25,8 +26,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
+    
     }
 
     // Update is called once per frame
