@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     [SerializeField] float positionYawFactor = 2f;
     [SerializeField] float controlRollFactor = -30f;
 
+    [SerializeField] GameObject[] guns;
+
     float xThrow;
     float yThrow;
     bool isControlEnabled = true;
@@ -34,15 +36,43 @@ public class Player : MonoBehaviour
     {
         if (isControlEnabled)
         { 
-        XMovement();
-        YMovement();
-        ProcessRotation();
+            XMovement();
+            YMovement();
+            ProcessRotation();
+            ProcessFiring();
+        }
+    }
+
+    private void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    private void ActivateGuns()
+    {
+       foreach(GameObject gun in guns)
+        {
+            gun.SetActive(true);
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(false);
         }
     }
 
     private void StopMovement()  //Called by string reference
     {
-        print("Stopped Movement");
         isControlEnabled = false;
     }
 
