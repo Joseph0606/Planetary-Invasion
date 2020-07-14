@@ -18,8 +18,7 @@ public class ScoreBoard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
+       
     }
 
     public void ScoreHit(int scorePerHit)
