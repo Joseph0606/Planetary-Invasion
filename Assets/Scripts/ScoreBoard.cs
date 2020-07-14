@@ -19,6 +19,8 @@ public class ScoreBoard : MonoBehaviour
     void Update()
     {
        
+
+
     }
 
     public void ScoreHit(int scorePerHit)
