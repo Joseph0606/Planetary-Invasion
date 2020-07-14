@@ -20,7 +20,6 @@ public class ScoreBoard : MonoBehaviour
     {
        
 
-
     }
 
     public void ScoreHit(int scorePerHit)
