@@ -28,6 +28,10 @@ public class Player : MonoBehaviour
     {
         
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7421c03d155f5a56616da00a43742ae3ead55aa0
     }
 
     // Update is called once per frame
